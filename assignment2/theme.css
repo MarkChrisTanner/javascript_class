@@ -1,0 +1,23 @@
+html {
+    margin: 20px 20px 20px 20px;
+    font-size: 1.299em;
+}
+
+form {
+    width: 35%;
+    text-align: right;
+}
+
+#div_2 {
+    width: 50%;
+}
+
+#fuckingButton {
+    text-align: left;
+}
+
+input {
+    display: inline-block;
+//    float: right;
+    font-size: 1.0em;
+}
