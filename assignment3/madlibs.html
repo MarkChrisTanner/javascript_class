@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mad Libs</title>
+    <style>
+			.invisible {
+				display: none;
+			}
+    </style>
+</head>
+<body>
+<div id="responses">
+    <!-- User responses (e.g. the things you plug in to your Mad Lib
+         should be obtained here, using a form.-->
+    <form name="responses">
+        Exclamation: <input name="excl" id="r_excl" type="text"><br>
+        Adverb: <input id="r_adv" type="text"><br>
+        Noun: <input id="r_noun" type="text"><br>
+        Adjective: <input id="r_adj" type="text"><br>
+        <input id="submit" type="submit" value="Get Mad!">
+    </form>
+</div>
+<div id="madlib" class="invisible">
+    <!-- Your Mad Lib (e.g. the output from your form) will go here. -->
+    <p><span id="item_0">__</span>! he said <span id="item_1">__</span><br>
+    as he jumped into his convertible <span id="item_2">__</span><br>
+    and drove off with his <span id="item_3">__</span> wife.</p>
+</div>
+
+<script>
+    var getmad = function() {
+
+        console.log("Hello there old chap"); // just to make sure stuff's happenin'
+        var responses = document.getElementsByTagName('input');
+        for (var i = 0; i < responses.length; i++) {
+            if (responses[i].type === "text") {
+                var iname = "item_" + i;
+                console.log(iname);
+                var m = document.getElementById(iname);
+                var nt = document.createTextNode(responses[i].value);
+                m.appendChild(nt);
+            }
+        }
+
+        document.getElementById('madlib').setAttribute('class', 'visible');
+    };
+
+    var sb = document.getElementById('submit');
+    sb.addEventListener('click', function(ob) {
+        ob.preventDefault();
+        getmad()
+    }, false);
+</script>
+
+</body>
+</html>
