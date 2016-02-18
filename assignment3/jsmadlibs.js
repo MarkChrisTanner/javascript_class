@@ -20,10 +20,13 @@ document.getElementById('madlib').setAttribute('class', 'visible'); };
 }, false);
 */
 
-$(document).master();
+function everything() {
+    $('form').on('submit', function(e){
+        e.preventDefault();
 
-var master() {
-$(#submit).on('submit', function () {
-        
     })
 }
+
+
+//$(everything()).ready
+$(document ).ready(everything );

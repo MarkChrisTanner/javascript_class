@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Mad Libs</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="cssmadlibs.css">
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="jsmadlibs.js"></script>
-    <style>
-			.invisible {
-				display: none;
-			}
-    </style>
 </head>
 <body>
 <div id="responses">
     <!-- User responses (e.g. the things you plug in to your Mad Lib
          should be obtained here, using a form.-->
-    <form name="responses">
+    <form name="responses" id="form">
         Exclamation: <input name="excl" id="r_excl" type="text"><br>
         Adverb: <input id="r_adv" type="text"><br>
         Noun: <input id="r_noun" type="text"><br>
