@@ -19,14 +19,34 @@ document.getElementById('madlib').setAttribute('class', 'visible'); };
     getmad()
 }, false);
 */
+var excl, r_adv, r_noun, r_adj;
 
 function everything() {
     $('form').on('submit', function(e){
         e.preventDefault();
-
+        getValues();
+        populated ();
     })
 }
 
+function getValues() {
+    excl = $('#excl').val();
+    r_adv = $('#r_adv').val();
+    r_noun = $('#r_noun').val();
+    r_adj = $('#r_adj').val();
+}
 
+function populated () {
+    if ( (excl == '') || (r_adv == '') || (r_noun == '') ) {
+        $('#madlib').after('<img id="fail" src="http://www.reactiongifs.com/r/yt.gif" alt="fail" />');
+    } else {
+        $('img').remove();
+        insert();
+    }
+}
+
+function insert() {
+    $('#item_0').text('').text(excl);
+};
 //$(everything()).ready
 $(document ).ready(everything );
