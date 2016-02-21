@@ -19,7 +19,7 @@ document.getElementById('madlib').setAttribute('class', 'visible'); };
     getmad()
 }, false);
 */
-var excl, r_adv, r_noun, r_adj;
+var r_excl, r_adv, r_noun, r_adj;
 
 function everything() {
     $('form').on('submit', function(e){
@@ -30,23 +30,26 @@ function everything() {
 }
 
 function getValues() {
-    excl = $('#excl').val();
+    r_excl = $('#r_excl').val();
     r_adv = $('#r_adv').val();
     r_noun = $('#r_noun').val();
     r_adj = $('#r_adj').val();
 }
 
 function populated () {
-    if ( (excl == '') || (r_adv == '') || (r_noun == '') ) {
+    if ( r_excl == '' || r_adv == '' || r_noun == '' || r_adj == '' ) {
         $('#madlib').after('<img id="fail" src="http://www.reactiongifs.com/r/yt.gif" alt="fail" />');
     } else {
         $('img').remove();
         insert();
-    }
+        $('#madlib').removeClass('invisible')    }
 }
 
 function insert() {
-    $('#item_0').text('').text(excl);
+    $('#item_0').text('').text(r_excl);
+    $('#item_1').text('').text(r_adv);
+    $('#item_2').text('').text(r_noun);
+    $('#item_3').text('').text(r_adj);
 };
 //$(everything()).ready
 $(document ).ready(everything );
