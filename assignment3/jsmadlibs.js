@@ -27,6 +27,10 @@ function everything() {
         getValues();
         populated ();
     })
+    $('#madlib').on('click', function(e) {
+        $('#madlib').fadeOut(700);
+        $('#responses').delay(800).fadeIn(700);
+    })
 }
 
 function getValues() {
@@ -42,7 +46,10 @@ function populated () {
     } else {
         $('img').remove();
         insert();
-        $('#madlib').removeClass('invisible')    }
+        //$('#madlib').removeClass('invisible');
+        $('#responses').fadeOut(700);
+        $('#madlib').delay(800).fadeIn(700);
+    }
 }
 
 function insert() {
@@ -51,5 +58,7 @@ function insert() {
     $('#item_2').text('').text(r_noun);
     $('#item_3').text('').text(r_adj);
 };
+
+
 //$(everything()).ready
 $(document ).ready(everything );
