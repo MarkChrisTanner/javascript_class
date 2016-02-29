@@ -5,19 +5,50 @@
     <title>The Beer site</title>
 </head>
 <link rel="stylesheet" type="text/css" href="css_for_beer.css">
-<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script src="js_with_beer.js"></script>
 <body>
-<div id="credit1" class="hidden">
-    https://www.christianpinder.com/articles/menu-using-html-lists-and-css/
-    for the menu structures.
+<header>
+</header>
+<div class="columns">
+<div class="left">
+    <div id="button">
+        <input type="submit" value="MENU">
+    </div>
+
+    <div id="credit1" class="hidden">
+        https://www.christianpinder.com/articles/menu-using-html-lists-and-css/
+        for the menu structures.
+    </div>
+
+    <div class="hidden" id="menuBox">
+        <ul id="menu1">
+            <li><a href="#">The Brewer</a></li>
+            <li><a href="#">The Beers</a>
+                <ul class="submenu">
+                    <li><a href="#">Honey Wheat</a></li>
+                    <li><a href="#">American Wheat</a></li>
+                    <li><a href="#">Fat Tire Style</a></li>
+                </ul>
+            </li>
+            <li><a href="#">A few stores</a>
+                <ul class="submenu">
+                    <li><a href="http://www.homebrewstuff.com/">Home Brew Stuff</a></li>
+                    <li><a href="http://www.brewershaven.com/">Brewers Haven</a></li>
+                    <li><a href="http://www.amazon.com/">Amazon</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </div>
-<div id="menu1">
-    <ul>
-        <li><a href="#">Who</a></li>
-        <li><a href="#">What</a></li>
-        <li><a href="#">Where</a></li>
-    </ul>
+
+<div class="right" id="test">
+    I'm just trying to meet the requirements of the assignment.
+    I thought I would hide the menu so that it would be more subtle, and the page should
+    be a two column layout.
+</div>
 </div>
 
 </body>
